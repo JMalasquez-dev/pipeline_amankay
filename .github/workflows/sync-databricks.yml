@@ -1,0 +1,19 @@
+# Cada push a develop actualiza el Git folder de Databricks con el último commit.
+name: sync-databricks
+on:
+  push:
+    branches: [develop]
+  workflow_dispatch:
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: databricks/setup-cli@main
+      - name: Actualizar el Git folder
+        # Ruta del Git folder en tu workspace (ajústala). Revisa `databricks repos update --help` en tu versión del CLI.
+        run: databricks repos update "$GIT_FOLDER" --branch main
+        env:
+          DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
+          DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
+          GIT_FOLDER: /Workspace/Users/johan.malasquez@vallegrande.edu.pe/amankay
