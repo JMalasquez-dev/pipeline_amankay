@@ -16,4 +16,4 @@ jobs:
         env:
           DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
           DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
-          GIT_FOLDER: /Workspace/Users/johan.malasquez@vallegrande.edu.pe/amankay
+          GIT_FOLDER: /Workspace/Users/johan.malasquez@vallegrande.edu.pe/pipeline_amankay
