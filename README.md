@@ -33,3 +33,7 @@ convierte a un DataFrame de Spark (`leer_s3_csv_spark`, `leer_s3_excel_spark`).
 1. Abre `pipeline_amankay_databricks.py` desde el Git folder y adjunta cómputo.
 2. Revisa `FUENTES` y `ETAPAS` al inicio y el widget `bucket`.
 3. Ejecuta todas las celdas. Es idempotente: si algo ya existe en S3, no se vuelve a descargar.
+
+
+## 4. Comando - Secret and Token (AWS)
+     aws configure export-credentials --format env
