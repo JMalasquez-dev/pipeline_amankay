@@ -12,7 +12,7 @@ jobs:
       - uses: databricks/setup-cli@main
       - name: Actualizar el Git folder
         # Ruta del Git folder en tu workspace (ajústala). Revisa `databricks repos update --help` en tu versión del CLI.
-        run: databricks repos update "$GIT_FOLDER" --branch main
+        run: databricks repos update "$GIT_FOLDER" --branch develop
         env:
           DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
           DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
